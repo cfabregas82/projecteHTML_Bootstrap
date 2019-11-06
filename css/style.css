@@ -248,7 +248,11 @@
 }
 
 #contact {
-    padding: 80px 0px 60px 0px
+    padding: 80px 0px 60px 0px;
+/*    box-shadow: 5px 10px 25px #555;
+    position: relative;
+    z-index: 22;*/
+        
 }
 
 .btn- {
@@ -259,10 +263,10 @@
     border: 5px solid #fff;
     border-radius: 10px;
     padding: 5px;
-    background-color: dimgray;
+    background-color: #174652;
     color: white;
-    font-size: 1.4em;
-    font-family: source-sans-pro, sans-serif;
+    /*font-size: 1.4em;
+    font-family: source-sans-pro, sans-serif;*/
     text-decoration: none;
 }
 .btn-pral:hover{
@@ -281,7 +285,19 @@
     width: 100%;
     padding-top: 70px;
 }
+
 #contact a{
-    color: gray;
+    color: white;
     font-size: 0.9em
+}
+.btn-login {
+    border: 5px solid #fff;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: orangered;
+    color: white;
+    font-size: 1.4em;
+    font-family: source-sans-pro, sans-serif;
+    text-decoration: none;
+    
 }

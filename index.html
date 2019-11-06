@@ -9,6 +9,8 @@
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Own CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -54,19 +56,168 @@
     <!-- Libraries CSS Files -->
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="animate-css/animate.min.css" rel="stylesheet">
+   
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet">
     
-    </head>
-    <body>
-    <div class="content">  
+</head>
     
-    <section class="container-fluid slider d-flex flex-column justify-content-center align-items-center text-center " id="index">
-        <h1 class="display-5">Corporate Service Radio</h1>
+    
+        <div>
+            <button type="button" class="btn btn-outline-primary pull-right m-3" data-toggle="modal" data-target="#registerModal">REGISTER</button>
+        </div>
+  
+        <div class="modal fade" role="dialog" id="registerModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Registre</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+                    <div class="modal-body">
+                    <form id="register-form">
+                        <div class="form-group">
+                            <input class="form-control" name="registrationemail" placeholder="Email" type="email">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" name="registrationpassword1" id="password" placeholder="Contraseña" type="password">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" name="registrationpassword2" placeholder="Repita la contraseña" type="password">
+                        </div>
+                        <div class="form-group">
+                             <select id="registration-state" name="registrationstate" class="form-control">
+                                <option value='selected'>Selecciona Provincia</option>
+                                <option value='alava'>Álava</option>
+                                <option value='albacete'>Albacete</option>
+                                <option value='alicante'>Alicante/Alacant</option>
+                                <option value='almeria'>Almería</option>
+                                <option value='asturias'>Asturias</option>
+                                <option value='avila'>Ávila</option>
+                                <option value='badajoz'>Badajoz</option>
+                                <option value='barcelona'>Barcelona</option>
+                                <option value='burgos'>Burgos</option>
+                                <option value='caceres'>Cáceres</option>
+                                <option value='cadiz'>Cádiz</option>
+                                <option value='cantabria'>Cantabria</option>
+                                <option value='castellon'>Castellón/Castelló</option>
+                                <option value='ceuta'>Ceuta</option>
+                                <option value='ciudadreal'>Ciudad Real</option>
+                                <option value='cordoba'>Córdoba</option>
+                                <option value='cuenca'>Cuenca</option>
+                                <option value='girona'>Girona</option>
+                                <option value='laspalmas'>Las Palmas</option>
+                                <option value='granada'>Granada</option>
+                                <option value='guadalajara'>Guadalajara</option>
+                                <option value='guipuzcoa'>Guipúzcoa</option>
+                                <option value='huelva'>Huelva</option>
+                                <option value='huesca'>Huesca</option>
+                                <option value='illesbalears'>Illes Balears</option>
+                                <option value='jaen'>Jaén</option>
+                                <option value='acoruña'>A Coruña</option>
+                                <option value='larioja'>La Rioja</option>
+                                <option value='leon'>León</option>
+                                <option value='lleida'>Lleida</option>
+                                <option value='lugo'>Lugo</option>
+                                <option value='madrid'>Madrid</option>
+                                <option value='malaga'>Málaga</option>
+                                <option value='melilla'>Melilla</option>
+                                <option value='murcia'>Murcia</option>
+                                <option value='navarra'>Navarra</option>
+                                <option value='ourense'>Ourense</option>
+                                <option value='palencia'>Palencia</option>
+                                <option value='pontevedra'>Pontevedra</option>
+                                <option value='salamanca'>Salamanca</option>
+                                <option value='segovia'>Segovia</option>
+                                <option value='sevilla'>Sevilla</option>
+                                <option value='soria'>Soria</option>
+                                <option value='tarragona'>Tarragona</option>
+                                <option value='santacruztenerife'>Santa Cruz de Tenerife</option>
+                                <option value='teruel'>Teruel</option>
+                                <option value='toledo'>Toledo</option>
+                                <option value='valencia'>Valencia/Valéncia</option>
+                                <option value='valladolid'>Valladolid</option>
+                                <option value='vizcaya'>Vizcaya</option>
+                                <option value='zamora'>Zamora</option>
+                                <option value='zaragoza'>Zaragoza</option>
+                             </select>
+                          </div>
+                          
+                          <div class="modal-footer">
+                        <input type="submit" class="btn btn-success" value="Sign In">
+                    </div>
+                        
+                    </form>    
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        </div>    
+    
+        <div>
+            <button type="button" class="btn btn-success pull-right mt-3" data-toggle="modal" data-target="#loginModal">LOGIN</button>
+        </div>
+  
+        <div class="modal fade" role="dialog" id="loginModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                   
+                    <form id="login-form">
+
+                    <div class="modal-header">
+                    
+                <h5 class="modal-title" id="exampleModalLabel">Accedeix</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+                    <div class="modal-body">
+                       
+                       
+                       
+                        <div class="form-group">
+                            <input class="form-control" name="login-email" type="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" name="login-password" id="login-password" type="password" placeholder="Contrasenya">
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">Entra</button>
+                    </div>
+                    </form>
+
+                </div>
+            </div>
+        </div> 
         
-    <div class=" button d-flex justify-content-center">
-      <a class="btn-pral" data-scroll href="#team">Saber més</a>
-    </div>
+ 
     
+    <section class="container-fluid slider d-flex flex-column justify-content-center text-center " id="index">
+       
+       <h1 class="display-5">Corporate Service Radio</h1>
+       
+       <div class=" button d-flex justify-content-center">
+           <a class="btn-pral" data-scroll href="#team">Saber més</a>
+       </div>
     </section>
+    
+
     
     
  
@@ -75,7 +226,7 @@
     ============================-->
          
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-clear shadow">
-    <a class="navbar-brand" data-scroll href="#index">CorporateServiceRadio</a>
+    <a class="navbar-brand" data-scroll href="#registerModal">CorporateServiceRadio</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -97,8 +248,9 @@
           <a class="nav-link" data-scroll href="index.html#contact">Contacte</a>
         </li>
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Què vols trobar" aria-label="Search">
+      
+       <form class="form-inline mt-2 mt-md-0" id="search-validation">
+        <input class="form-control mr-sm-2" type="text" name="search" placeholder="Què vols trobar" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerca</button>
       </form>
     </div>
@@ -332,37 +484,100 @@
     </div>
     </section>
     
-    <section class="container" id="contact">
-        <h3 class="section-title">Contacte</h3>
-        <div class="section-title-divider"></div>
-        
-        <div class="row bg-infomb-5">
-            <div class="col-md-4 text-center p-5">
-                <nav class="nav flex-column">
-                    <p>Troba'm</p>
-                    <a class="nav-black" href="https://goo.gl/maps/SVtcqjEY5jZCtJnZ9">Apel.les Mestres 6A (08402) Granollers BCN</a>
-                </nav>
+<!--Section: Contact v.2-->
+
+<section class="container mb-4" id="contact">
+    <h3 class="section-title">CONTACTE</h3>
+          <div class="section-title-divider"></div>
+
+    <!--Section description-->
+    <p class="text-center w-responsive mx-auto mb-5">Tens preguntes? No dubtis en contactar amb nosaltres. Estarem encantats de resoldre-les!!</p>
+
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-9 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-3">
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Nom">
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-3">
+                            <input type="text" id="email" name="email" class="form-control" placeholder="Email">
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-3">
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Assumpte">
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="Missatge"></textarea>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Grid row-->
+
+            </form>
+
+            <div class="text-center text-md-left mt-3">
+                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
             </div>
-            
-            <div class="col-md-4 text-center p-5">
-                <nav class="nav flex-column">
-                    <p>Contacta'm</p>
-                    <a class="nav-black" href="tel:+34627162934">+34 627162934</a>
-                    <a class="nav-black" href="mailto:cristian.fabregas@gmail.com">cristian.fabregas@gmail.com</a>
-                </nav>
-            </div>
-            
-            <div class="col-md-4 text-center p-5">
-                <nav class="nav flex-column">
-                    <p>Segueixme</p>
-                    <a class="nav-black" href="#">Facebook</a>
-                    <a class="nav-black" href="#">Instagram</a>
-                    <a class="nav-black" href="#">Linkedin</a>
-                    <a class="nav-black" href="#">Twiter</a>
-                </nav>
-            </div>
+            <div class="status"></div>
         </div>
-    </section>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-3 text-center">
+            <ul class="list-unstyled mb-0">
+                <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                    <p>Roc i Boronat, 117. 08018 BCN</p>
+                </li>
+
+                <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                    <p>+34 932 91 76 10</p>
+                </li>
+
+            </ul>
+        </div>
+        <!--Grid column-->
+
+    </div>
+
+</section>
+<section>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191267.90488514592!2d2.0719236198240476!3d41.49211591766076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a33d3b71de05%3A0xbb83ff380d17f7fe!2sCibernarium!5e0!3m2!1ses!2ses!4v1572458225495!5m2!1ses!2ses" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+</section>
+<!--Section: Contact v.2-->
         
     <footer class="footer mt-auto py-5 text-center">
       <div class="container">
@@ -376,6 +591,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  </div>
-  </body>
+    
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script>
+    
+    <!-- Jquery validation form scripts -->
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.min.js"></script>
+      <script type="text/javascript" src="js/register_validation.js"></script>
+      <script type="text/javascript" src="js/login_validation.js"></script>
+      <script type="text/javascript" src="js/search_validation.js"></script>
 </html>

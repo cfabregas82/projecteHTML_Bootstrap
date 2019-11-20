@@ -7,14 +7,6 @@
     
     <title>Corporate Service Radio</title>
     
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Own CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    
     <!--    Scroll-->
     <script src="js/smooth-scroll.min.js"></script>
     
@@ -29,47 +21,33 @@
         }); 
     </script>
     
-    <style>
-    
+    <!--<style>
     .slider{
-/*    background: url(img/img04.jpg);*/
+    background: url(img/img04.jpg);
     height: 100vh;
     background-size: cover;
     background-position: center;
     }
-        
-    .contact{
-    background: url(img/img03.jpg);
-    height: 40vh;
-    background-position: center;
-    }
-    </style>
+    </style>-->
     
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Own CSS -->
+    <link rel="stylesheet" href="css/style.css">
     <!--    GoogleFonts-->
     <link href="https://fonts.googleapis.com/css?family=Raleway:900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Mr+Dafoe&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     
     <!--    AdobeFonts-->
-<!--    <script src="//use.edgefonts.net/mr-dafoe.js"></script>-->
-    <script src="//use.edgefonts.net/source-sans-pro.js"></script>
+    <script src="//use.edgefonts.net/source-sans-pro.js"></script>/
     
     <!-- Libraries CSS Files -->
-  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="animate-css/animate.min.css" rel="stylesheet">
-   
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  <!-- Bootstrap core CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Material Design Bootstrap -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
     
 </head>
-    
-    
+
         <div>
             <button type="button" class="btn btn-outline-primary pull-right m-3" data-toggle="modal" data-target="#registerModal">REGISTER</button>
         </div>
@@ -88,13 +66,13 @@
                     <div class="modal-body">
                     <form id="register-form">
                         <div class="form-group">
-                            <input class="form-control" name="registrationemail" placeholder="Email" type="email">
+                            <input class="form-control" id="mail" name="registrationemail" placeholder="Email" type="email" required>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" name="registrationpassword1" id="password" placeholder="Contraseña" type="password">
+                            <input class="form-control" id="password"  name="registrationpassword1" placeholder="Contraseña" type="password" required>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" name="registrationpassword2" placeholder="Repita la contraseña" type="password">
+                            <input class="form-control" id="password2" name="registrationpassword2" placeholder="Repita la contraseña" type="password" required>
                         </div>
                         <div class="form-group">
                              <select id="registration-state" name="registrationstate" class="form-control">
@@ -175,31 +153,32 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                    
-                    <form id="login-form">
+                    <form method="GET" name="vform" onsubmit="return Validate()">
 
-                    <div class="modal-header">
-                    
-                <h5 class="modal-title" id="exampleModalLabel">Accedeix</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-
-                    <div class="modal-body">
-                       
-                       
-                       
-                        <div class="form-group">
-                            <input class="form-control" name="login-email" type="email" placeholder="Email">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Accedeix</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
-                        <div class="form-group">
-                            <input class="form-control" name="login-password" id="login-password" type="password" placeholder="Contrasenya">
-                        </div>
-                    </div>
 
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-success">Entra</button>
-                    </div>
+                        <div class="modal-body">
+                           
+                            <div id="email_div">
+   	                            <input class="form-control" type="text" name="email" class="textInput" placeholder="Email">
+   	                            <div id="email_error"></div>
+   	                        </div>
+   	
+   	                        <div id="password_div">
+   	                            <input class="form-control" type="password" name="password" class="textInput" placeholder="Contrasenya">
+   	                            <div id="password_error"></div>
+   	                        </div>
+                            
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="submit" name="register" class="btn btn-success">Entra</button>
+                        </div>
                     </form>
 
                 </div>
@@ -592,12 +571,10 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script>
-    
     <!-- Jquery validation form scripts -->
       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.min.js"></script>
       <script type="text/javascript" src="js/register_validation.js"></script>
-      <script type="text/javascript" src="js/login_validation.js"></script>
       <script type="text/javascript" src="js/search_validation.js"></script>
+      <script type="text/javascript" src="js/caca.js"></script>
+
 </html>
